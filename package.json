@@ -1,11 +1,10 @@
 {
   "name": "wordpress-comments-jekyll-staticman",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert Wordpress comment into Jekyll for Staticman.",
   "main": "cli.js",
   "scripts": {
-    "test": "node cli test/wordpress-export.xml .",
-    "build": "node bin/build-package.js"
+    "test": "node cli test/wordpress-export.xml ."
   },
   "repository": {
     "type": "git",
@@ -13,7 +12,16 @@
   },
   "bin": "cli.js",
   "keywords": [
-    "boilerplate"
+    "wordpress",
+    "jekyll",
+    "staticman",
+    "export",
+    "import",
+    "tool",
+    "cli",
+    "convert",
+    "comments",
+    "comment"
   ],
   "author": "Arthur Lacoste <arthak@gmail.com>",
   "license": "MIT",
