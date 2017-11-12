@@ -16,7 +16,7 @@ console.log('Starting to find comments...');
 const createFile = c => {
 	const timestamp = new Date(c.date).getTime();
 	const filename = path.join(args[1], '/comments/', c.slug,
-  '/comment-' + timestamp + '.md');
+  '/comment-' + timestamp + '.yml');
 	const fileInput = yaml.safeDump(c);
 
 	fspath.writeFile(path.resolve(filename), fileInput, err => {
