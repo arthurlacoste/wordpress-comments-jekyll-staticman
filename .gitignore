@@ -13,6 +13,7 @@ pids
 *.pid.lock
 .todo.md
 
+bin/
 comments/
 wp.xml
 

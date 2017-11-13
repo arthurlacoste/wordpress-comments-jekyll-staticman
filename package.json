@@ -1,6 +1,6 @@
 {
   "name": "wordpress-comments-jekyll-staticman",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Convert Wordpress comment into Jekyll for Staticman.",
   "main": "cli.js",
   "scripts": {
@@ -10,7 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/arthurlacoste/wordpress-comments-jekyll-staticman.git"
   },
-  "bin": "cli.js",
+  "bin": {
+    "wp2sm": "cli.js"
+  },
   "keywords": [
     "wordpress",
     "jekyll",

@@ -13,15 +13,16 @@ let i = 0;
 
 console.log('Starting to find comments...');
 
-const createFile = c => {
+const createFile = (c, slug) => {
 	const timestamp = new Date(c.date).getTime();
-	const filename = path.join(args[1], '/comments/', c.slug,
+	const filename = path.join(args[1], '/comments/', slug,
   '/comment-' + timestamp + '.yml');
 	const fileInput = yaml.safeDump(c);
 
 	fspath.writeFile(path.resolve(filename), fileInput, err => {
 		i += 1;
 		console.log(`Adding comment ${i}, by ${c.name}...`);
+    console.log(`To: ${filename}`);
 		if (err) {
 			throw err;
 		}
@@ -36,7 +37,6 @@ const parseComments = (comments, slug) => {
 
 			if (comment['wp:comment_approved'][0] === '1') {
 				const commentObj = {
-					slug,
 					name: comment['wp:comment_author'][0],
 					date: comment['wp:comment_date'][0],
 					url: comment['wp:comment_author_url'][0],
@@ -44,14 +44,7 @@ const parseComments = (comments, slug) => {
 					email: md5(comment['wp:comment_author_email'][0])
 				};
 
-				createFile(commentObj);
-        /* Filter by length ?
-        if(commentObj.message.length<50) {
-          console.log(commentObj)
-          i += 1
-          console.log('I', i)
-
-        } */
+				createFile(commentObj, slug);
 			}
 		}
 	}

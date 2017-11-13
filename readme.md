@@ -17,13 +17,13 @@ npm i wordpress-comments-jekyll-staticman -g
 First, import your comments from WordPress with the built-in export tool, then launch this command:
 
 ```terminal
-wordpress-comments-jekyll-staticman {{ xml file }} {{ folder for comments }}
+wp2sm {{ xml file }} {{ folder for comments }}
 ```
 
 Example:
 
 ```terminal
-wordpress-comments-jekyll-staticman comments.xml /my/folder
+wp2sm comments.xml /my/folder
 ```
 
 ## Staticman settings
