@@ -9,8 +9,6 @@ const args = process.argv.slice(2);
 const parser = new xml2js.Parser();
 let i = 0;
 
-console.log('Starting to find comments...');
-
 const createFile = (c, slug) => {
 	const timestamp = new Date(c.date).getTime();
 	const filename = path.join(args[1], '/comments/', slug,
@@ -49,9 +47,12 @@ const parseComments = (comments, slug) => {
 };
 
 const start = (source, dest) => {
+  
+  console.log('Starting to find comments...');
+
   source = source || args[0];
   dest = dest || args[1];
-  
+
   fs.readFile(path.resolve(args[0]), (err, data) => {
   	if (err) {
   		throw err;
