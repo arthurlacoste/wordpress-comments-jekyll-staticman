@@ -1,8 +1,12 @@
-# wordpress-comments-jekyll-staticman
+
+# wordpress-comments-jekyll-staticman
+
 
 [![NPM Version][npm-version]][npm-url]
 [![travis][travis-badge]][travis-url]
 [![xo][xo-badge]][xo-url]
+
+You can now use a full export tool (Including posts, pages & comments) [with this tool](https://github.com/arthurlacoste/wordpress2jekyll).
 
 This little import tool allow to imports comments from a WordPress blog, to be used on [Jekyll] with [Staticman] (v2).
 
